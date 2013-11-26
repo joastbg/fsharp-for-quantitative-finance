@@ -7,7 +7,7 @@ open MathNet.Numerics.LinearAlgebra
 open MathNet.Numerics.LinearAlgebra.Double
 open MathNet.Numerics.Distributions
 
-let filePath = @"C:\Users\Gecemmo\Desktop\smile_data.csv"
+let filePath = @"smile_data.csv"
 
 /// Split row on commas
 let splitCommas (l:string) =
