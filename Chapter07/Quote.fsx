@@ -1,6 +1,4 @@
-﻿
-
-/// Type to represent market data, bid ask, latest aggregation
+﻿/// Type to represent market data, bid ask, latest aggregation
 type Quote =
     {
         bid : float
@@ -27,13 +25,6 @@ type LightQuote =
 
 
 /// Brownian motion / Wiener process
-(*
-Continous time stochastic process
-Increment
-Stationary increments
-W(0) = 0
-*)
-
 let random = new System.Random()
 let rnd() = random.NextDouble()
 let data = [for i in 1 .. 10 -> rnd()]
@@ -42,12 +33,6 @@ let N = 500.0
 let dt:float = T / N
 
 /// Recursion
-(*
-let rec wiener n =
-    let dW = sqrt(dt)*rnd()
-    if n < 10
- *)
-
 let primes =
     Seq.initInfinite (fun i -> i + 2) //need to skip 0 and 1 for isPrime
     |> Seq.map (fun i -> bigint(i))

@@ -1,5 +1,4 @@
 ﻿#r "System.Windows.Forms.DataVisualization.dll"
-#r @"C:\Users\Niklas\Documents\Visual Studio 2012\Projects\Chapter5\packages\MathNet.Numerics.2.6.1\lib\net40\MathNet.Numerics.dll"
 
 open System
 open System.Net
@@ -41,9 +40,5 @@ let W s =
     let rec loop x = seq { yield x; yield! loop (x + sqrt(dt)*normd.Sample()*s)}
     loop s
 
-// stochastic drift and stochastic volatility
-
-
 wienerProcess.Points.Clear()
 do (Seq.take 100 (W 55.00)) |> Seq.iter (wienerProcess.Points.Add >> ignore)
-

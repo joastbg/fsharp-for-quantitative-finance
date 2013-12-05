@@ -1,9 +1,5 @@
-﻿
-
-
-// FSChart
+﻿// FSChart
 #r @"System.Windows.Forms.DataVisualization.dll" 
-#r @"C:\Users\Niklas\Documents\Visual Studio 2012\Projects\Chapter5\packages\FSharp.Charting.0.87\lib\net40\FSharp.Charting.dll"
 
 open System
 open System.Net
@@ -68,13 +64,13 @@ type Quote =
 
 let q1 : Quote = {bid = 100.0; ask = 200.0}
 
-let (didParse, value) = Int32.TryParse("123");; 
+let (didParse, value) = Int32.TryParse("123")
 
-let (bid, ask) = (100.0, 110.0);;
+let (bid, ask) = (100.0, 110.0)
 bid
 ask
 
-let (x, y, _) = (3.0, 2.0, 4.0);;
+let (x, y, _) = (3.0, 2.0, 4.0)
 
 let (|RegexContains|_|) pattern input = 
     let matches = System.Text.RegularExpressions.Regex.Matches(input, pattern)

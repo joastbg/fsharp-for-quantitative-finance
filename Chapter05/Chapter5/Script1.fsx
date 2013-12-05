@@ -65,7 +65,6 @@ let getPrices() =
     |> Seq.map (fun s -> float s.[4])
     |> Seq.truncate 2500
 
-
 // Calc moving average
 let movingAverage n (prices:seq<float>) =
     prices    
@@ -98,5 +97,3 @@ let ub = movingStdDev 100 sp
 Seq.zip ub ma |> Seq.map (fun (a,b) -> b + 2.0 * a) |> Seq.iter (upperBand.Points.Add >> ignore)
 // Lower
 Seq.zip ub ma |> Seq.map (fun (a,b) -> b - 2.0 * a) |> Seq.iter (lowerBand.Points.Add >> ignore)
-
-

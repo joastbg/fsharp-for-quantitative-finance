@@ -1,5 +1,4 @@
-﻿
-///////////////////////// Linear regression using least squares
+﻿/// Linear regression using least squares
 
 open System
 open MathNet.Numerics
@@ -31,7 +30,6 @@ let sum = data |> Seq.sum
 let min = data |> Seq.min
 let max = data |> Seq.max
 
-
 ////
 let calcDailyReturns(prices:seq<float>) =
     prices
@@ -62,7 +60,6 @@ let data = [for i in 1 .. 100 -> rnd() * 10.0]
 
 let var = variance data
 let std = stddev2 data
-
 
 
 ///////////////////////// Regression with noisy data
@@ -100,7 +97,6 @@ printfn "y: %s" (y.ToString())
 printfn "p: %s" (p.ToString())
 
 (p.[0], p.[1])
-
 
 ///////////////////////// Implementing algorithms
 

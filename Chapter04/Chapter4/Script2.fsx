@@ -1,11 +1,4 @@
-﻿
-// -------------------------------------------
-// F# Plotter
-// -------------------------------------------
-// Plots stock price and moving average
-// (C) Johan Astborg, 2012 - joastbg@gmail.com
-
-#r "System.Windows.Forms.DataVisualization.dll"
+﻿#r "System.Windows.Forms.DataVisualization.dll"
 
 open System
 open System.Net

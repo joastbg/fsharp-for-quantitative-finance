@@ -1,14 +1,4 @@
-﻿
-// -------------------------------------------
-// F# Plotter
-// -------------------------------------------
-// Plots stock price and moving average
-// (C) Johan Astborg, 2012 - joastbg@gmail.com
-
-/// Normal distribution
-
-#r @"C:\Users\Niklas\Documents\Visual Studio 2012\Projects\Chapter5\packages\MathNet.Numerics.2.6.1\lib\net40\MathNet.Numerics.dll"
-#r "System.Windows.Forms.DataVisualization.dll"
+﻿/// Normal distribution
 
 open System
 open System.Net
