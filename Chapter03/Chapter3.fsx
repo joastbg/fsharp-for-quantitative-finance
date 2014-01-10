@@ -123,6 +123,18 @@ let second = bisect 0 25 f 0.0 10.0 0.01
 first;;
 second;;
 
+/// Secant methods (Updated version)
+
+let rec secant n N (f:float -> float) (x0:float) (x1:float) (x2:float) : float =
+    if n >= N then x0
+    else
+        let x = x1 - (f(x1))*((x1 - x0)/(f(x1) - f(x0)))
+        secant (n + 1) N f x x0 x2
+
+let f = (fun x -> (x**2.0 - 612.0))
+
+secant 0 10 f 0.0 10.0 30.0
+
 ///////////////////////// Statistics
 
 /// Helpers to generate random numbers
